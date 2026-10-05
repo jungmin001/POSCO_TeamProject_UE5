@@ -1,0 +1,106 @@
+# =========================================================
+#  Unreal Engine 5 .gitignore
+# =========================================================
+
+# ---- 엔진이 자동 생성하는 폴더 (용량의 대부분, 절대 올리지 말 것) ----
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+Build/
+.vs/
+.idea/
+.vscode/
+
+# 플러그인 내부의 자동 생성 폴더
+Plugins/**/Binaries/
+Plugins/**/Intermediate/
+Plugins/**/DerivedDataCache/
+Plugins/**/Saved/
+
+# ---- IDE / 솔루션 파일 (.uproject 우클릭 → Generate 로 재생성 가능) ----
+*.sln
+*.slnx
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+*.user
+*.userprefs
+*.code-workspace
+.vsconfig.user
+compile_commands.json
+
+# ---- 컴파일 결과물 ----
+*.slo
+*.lo
+*.o
+*.pch
+*.gch
+*.dll
+*.dylib
+*.so
+*.lib
+*.a
+*.la
+*.lai
+*.exe
+*.out
+*.app
+*.ipa
+*.pdb
+*.ilk
+*.exp
+*.target
+*.modules
+*.version
+
+# ---- 쿠킹 / 패키징 결과물 ----
+*.pak
+*.ucas
+*.utoc
+*.xcodeproj
+*.xcworkspace
+Packaged/
+Releases/
+Archives/
+
+# ---- 캐시 / 임시 파일 ----
+*.ddc
+*.udd
+*.tmp
+*.log
+*.bak
+*.swp
+*~
+Content/Developers/
+Content/Collections/
+Content/**/__ExternalActors__/**/*.uasset.tmp
+
+# ---- 압축 파일 (백업용 zip 등이 실수로 올라가는 것 방지) ----
+*.zip
+*.7z
+*.rar
+
+# ---- 무료 에셋팩 (각자 Fab/Epic 런처에서 받아서 추가) ----
+Content/StarterContent/
+
+# ---- 센서 데이터 원본 (CSV 등 대용량 데이터는 여기에 두고 공유는 드라이브로) ----
+Data/
+
+# ---- 원본 작업 파일 (용량 큼, 레포 대신 드라이브로 공유) ----
+*.psd
+*.blend
+*.blend1
+*.max
+*.mb
+*.ma
+*.spp
+
+# ---- OS 파일 ----
+.DS_Store
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/

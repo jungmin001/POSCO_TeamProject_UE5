@@ -1,0 +1,72 @@
+﻿# =========================================================
+#  Unreal Engine 5 .gitattributes
+# =========================================================
+
+# ---- 텍스트 파일: 줄바꿈 자동 정규화 ----
+* text=auto
+
+*.cpp       text diff=cpp
+*.h         text diff=cpp
+*.hpp       text diff=cpp
+*.inl       text diff=cpp
+*.cs        text diff=csharp
+*.ini       text
+*.uproject  text
+*.uplugin   text
+*.json      text
+*.md        text
+*.txt       text
+*.csv       text
+*.xml       text
+*.yml       text
+*.py        text
+*.usf       text
+*.ush       text
+
+# Windows 전용 스크립트는 CRLF 유지
+*.bat       text eol=crlf
+*.cmd       text eol=crlf
+*.ps1       text eol=crlf
+*.sh        text eol=lf
+
+# ---- 언리얼 에셋: Git LFS + 잠금(lock) 가능 ----
+# (병합이 불가능한 바이너리라 팀원끼리 같은 파일을 동시에 수정하면 충돌 → lock 사용 권장)
+*.uasset    filter=lfs diff=lfs merge=lfs -text lockable
+*.umap      filter=lfs diff=lfs merge=lfs -text lockable
+
+# ---- 이미지 ----
+*.png       filter=lfs diff=lfs merge=lfs -text
+*.jpg       filter=lfs diff=lfs merge=lfs -text
+*.jpeg      filter=lfs diff=lfs merge=lfs -text
+*.tga       filter=lfs diff=lfs merge=lfs -text
+*.tif       filter=lfs diff=lfs merge=lfs -text
+*.tiff      filter=lfs diff=lfs merge=lfs -text
+*.bmp       filter=lfs diff=lfs merge=lfs -text
+*.exr       filter=lfs diff=lfs merge=lfs -text
+*.hdr       filter=lfs diff=lfs merge=lfs -text
+*.dds       filter=lfs diff=lfs merge=lfs -text
+*.ico       filter=lfs diff=lfs merge=lfs -text
+
+# ---- 3D 모델 ----
+*.fbx       filter=lfs diff=lfs merge=lfs -text
+*.obj       filter=lfs diff=lfs merge=lfs -text
+*.gltf      filter=lfs diff=lfs merge=lfs -text
+*.glb       filter=lfs diff=lfs merge=lfs -text
+*.abc       filter=lfs diff=lfs merge=lfs -text
+*.usd       filter=lfs diff=lfs merge=lfs -text
+*.usdz      filter=lfs diff=lfs merge=lfs -text
+
+# ---- 사운드 / 영상 ----
+*.wav       filter=lfs diff=lfs merge=lfs -text
+*.mp3       filter=lfs diff=lfs merge=lfs -text
+*.ogg       filter=lfs diff=lfs merge=lfs -text
+*.mp4       filter=lfs diff=lfs merge=lfs -text
+*.mov       filter=lfs diff=lfs merge=lfs -text
+*.avi       filter=lfs diff=lfs merge=lfs -text
+*.bk2       filter=lfs diff=lfs merge=lfs -text
+
+# ---- 폰트 / 기타 바이너리 ----
+*.ttf       filter=lfs diff=lfs merge=lfs -text
+*.otf       filter=lfs diff=lfs merge=lfs -text
+*.xlsx      filter=lfs diff=lfs merge=lfs -text
+*.pdf       filter=lfs diff=lfs merge=lfs -text
